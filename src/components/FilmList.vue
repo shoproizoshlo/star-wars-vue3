@@ -1,7 +1,7 @@
 <template>
   <div class="col" v-for="film in films" :key="film.id">
     <div class="card">
-      <img src="./icons/vader.png" class="card-img-top" alt="Dart Vader image" />
+      <img src="/src/assets/icons/vader.png" class="card-img-top" alt="Dart Vader image" />
       <div class="card-body">
         <h5 class="card-title">{{ film.title }}</h5>
         <p class="card-text">Description – {{ film.opening_crawl }}</p>
@@ -16,15 +16,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import swapiService from '@/services/swapiService'
-
-interface Film {
-  id: number
-  title: string
-  director: string
-  producer: string
-  opening_crawl: string
-  release_date: Date
-}
+import FilmInterface from '@/interfaces/FilmInterface.ts'
 
 const films = ref<Film[]>([])
 
