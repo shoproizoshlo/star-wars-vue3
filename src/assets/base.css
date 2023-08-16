@@ -1,0 +1,9 @@
+:root {
+  --main-color: #ffe500;
+  --main-font-family: 'Star Wars', sans-serif;
+}
+
+body {
+  background-color: black;
+}
+@import url('https://fonts.cdnfonts.com/css/star-wars');
