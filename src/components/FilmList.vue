@@ -4,7 +4,7 @@
       <img src="/src/assets/icons/vader.png" class="card-img-top" alt="Dart Vader image" />
       <div class="card-body">
         <h5 class="card-title">{{ film.title }}</h5>
-        <p class="card-text">Description – {{ film.opening_crawl }}</p>
+        <p class="card-text">{{ film.opening_crawl }}</p>
         <p class="card-text">Director – {{ film.director }}</p>
         <p class="card-text">Producer – {{ film.producer }}</p>
         <p class="card-text">Release date – {{ film.release_date }}</p>
@@ -16,9 +16,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import swapiService from '@/services/swapiService'
-import FilmInterface from '@/interfaces/FilmInterface.ts'
+import FilmInterface from '@/interfaces/FilmInterface'
 
-const films = ref<Film[]>([])
+const films = ref<FilmInterface[]>([])
 
 onMounted(async () => {
   try {
