@@ -24,7 +24,6 @@ onMounted(async () => {
   try {
     const response = await swapiService.get('/films/')
     films.value = response.data.results
-    console.log(films.value[0])
   } catch (error) {
     console.error('Error fetching films:', error)
   }
