@@ -5,7 +5,18 @@
   </div>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import { ref, onMounted } from 'vue'
+// import Film from '@/interfaces/FilmInterface'
+
+export default {
+  props: {
+    films: Array // Define the type of the prop (Array in this case)
+  }
+}
+
+// const films = ref<Film[]>([])
+</script>
 
 <style lang="scss" scoped>
 $color_1: #f2f2f2;

@@ -1,5 +1,5 @@
 <template>
-  <Search />
+  <Search :films="films" />
   <Loader v-if="loading" />
   <div v-else class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col" v-for="film in films" :key="film.id">
@@ -20,13 +20,12 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import swapiService from '@/services/swapiService'
-import Film from '@/interfaces/FilmInterface'
+import { Film } from '@/interfaces/FilmInterface'
 import Loader from './Loader.vue'
-import Search from './Search.vue'
 
 const films = ref<Film[]>([])
 
-const loading = ref(true) // Loading state
+const loading = ref(true)
 
 onMounted(async () => {
   try {
@@ -35,10 +34,11 @@ onMounted(async () => {
   } catch (error) {
     console.error('Error fetching films:', error)
   } finally {
-    loading.value = false // Set loading to false after data fetch or error
+    loading.value = false
   }
 })
 </script>
+
 <style lang="scss">
 $color_1: #f2f2f2;
 $background-color_1: #222831;
