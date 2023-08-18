@@ -16,15 +16,20 @@
 <script setup lang="ts">
 import Welcome from './components/Welcome.vue'
 import FilmList from './components/FilmList.vue'
-import Loader from './components/Loader.vue'
-import { ref } from 'vue'
-const isLoading = ref(true) // Loading state
 </script>
 
 <style lang="scss">
+$color_1: #ffe500;
+$font-family_1: 'Star Wars', sans-serif;
 header {
-  margin: 5%;
-  padding: 7%;
+  margin: 5% 5% 0 5%;
+  padding: 5% 5% 0 5%;
   text-align: center;
+}
+
+.story {
+  font-family: $font-family_1;
+  color: $color_1;
+  font-size: 1.5em;
 }
 </style>
