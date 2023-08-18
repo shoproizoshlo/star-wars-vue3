@@ -16,9 +16,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import swapiService from '@/services/swapiService'
-import FilmInterface from '@/interfaces/FilmInterface'
+import Film from '@/interfaces/FilmInterface'
 
-const films = ref<FilmInterface[]>([])
+const films = ref<Film[]>([])
 
 onMounted(async () => {
   try {
