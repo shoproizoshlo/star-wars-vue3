@@ -5,13 +5,20 @@
   </div>
 </template>
 
-<!-- <script lang="ts"></script> -->
+<script lang="ts">
+export default {
+  props: {
+    films: Array
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 $color_1: #f2f2f2;
 $background-color_1: #222831;
 
-p {
+p,
+li {
   color: $color_1;
   margin: 0;
 }
