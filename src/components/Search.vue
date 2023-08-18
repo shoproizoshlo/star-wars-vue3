@@ -5,14 +5,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { ref, defineProps } from 'vue'
-
-const props = defineProps(['films'])
-const films = ref(props.films)
-
-export default
-</script>
+<!-- <script lang="ts"></script> -->
 
 <style lang="scss" scoped>
 $color_1: #f2f2f2;

@@ -1,5 +1,5 @@
 <template>
-  <Search :films="films" />
+  <Search />
   <Loader v-if="loading" />
   <div v-else class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col" v-for="film in films" :key="film.id">
