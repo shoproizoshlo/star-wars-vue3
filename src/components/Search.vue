@@ -6,16 +6,12 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from 'vue'
-// import Film from '@/interfaces/FilmInterface'
+import { ref, defineProps } from 'vue'
 
-export default {
-  props: {
-    films: Array // Define the type of the prop (Array in this case)
-  }
-}
+const props = defineProps(['films'])
+const films = ref(props.films)
 
-// const films = ref<Film[]>([])
+export default
 </script>
 
 <style lang="scss" scoped>

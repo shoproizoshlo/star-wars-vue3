@@ -20,8 +20,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import swapiService from '@/services/swapiService'
-import { Film } from '@/interfaces/FilmInterface'
+import type { Film } from '@/interfaces/FilmInterface'
 import Loader from './Loader.vue'
+import Search from './Search.vue'
 
 const films = ref<Film[]>([])
 
@@ -42,12 +43,6 @@ onMounted(async () => {
 <style lang="scss">
 $color_1: #f2f2f2;
 $background-color_1: #222831;
-
-.story {
-  text-align: center;
-  font-size: 28px;
-  font-style: italic;
-}
 
 .card {
   text-align: center;

@@ -30,6 +30,7 @@ header {
 .story {
   font-family: $font-family_1;
   color: $color_1;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  text-align: center;
 }
 </style>
