@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'Loader'
-}
-</script>
-
 <style>
 .loader {
   display: inline-block;

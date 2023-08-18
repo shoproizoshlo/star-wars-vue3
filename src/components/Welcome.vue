@@ -8,7 +8,6 @@ defineProps<{
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h2>to Star Wars</h2>
-    <button class="scroll">Scroll down</button>
   </div>
 </template>
 <style lang="scss">
