@@ -1,5 +1,5 @@
 <template>
-  <input v-model="searchTerm" @input="searchFilms" placeholder="Search for a film" />
+  <input v-model="searchTerm" @input="searchFilms" placeholder="Search for a film" class="ps-3" />
 
   <Loader v-if="loading" />
   <div v-else class="row row-cols-1 row-cols-md-2 g-4">
@@ -24,9 +24,11 @@ import swapiService from '@/services/swapiService'
 import type { Film } from '@/interfaces/FilmInterface'
 import Loader from './Loader.vue'
 
-const films = ref<Film[]>([])
-const searchTerm = ref('')
 const loading = ref(false)
+
+const films = ref<Film[]>([])
+
+const searchTerm = ref('')
 
 const filteredFilms = computed(() => {
   return films.value.filter((film) =>
@@ -61,5 +63,21 @@ $background-color_1: #222831;
   margin: 10px auto;
   height: 60px;
   width: 60px;
+}
+
+p,
+li {
+  color: $color_1;
+  margin: 0;
+}
+input {
+  display: block;
+  margin: 100px auto;
+  color: $color_1;
+  background-color: $background-color_1;
+  width: 297px;
+  height: 46px;
+  border: 2px solid #ffe500;
+  border-radius: 20px;
 }
 </style>
