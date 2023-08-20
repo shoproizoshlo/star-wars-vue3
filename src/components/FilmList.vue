@@ -1,8 +1,9 @@
 <template>
-  <Search :films="films" />
+  <input v-model="searchTerm" @input="searchFilms" placeholder="Search for a film" />
+
   <Loader v-if="loading" />
   <div v-else class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" v-for="film in films" :key="film.id">
+    <div class="col" v-for="film in filteredFilms" :key="film.id">
       <div class="card">
         <img src="/src/assets/icons/vader.png" class="card-img-top" alt="Dart Vader image" />
         <div class="card-body">
@@ -18,26 +19,32 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import swapiService from '@/services/swapiService'
 import type { Film } from '@/interfaces/FilmInterface'
 import Loader from './Loader.vue'
-import Search from './Search.vue'
 
 const films = ref<Film[]>([])
+const searchTerm = ref('')
+const loading = ref(false)
 
-const loading = ref(true)
+const filteredFilms = computed(() => {
+  return films.value.filter((film) =>
+    film.title.toLowerCase().includes(searchTerm.value.toLowerCase())
+  )
+})
 
-onMounted(async () => {
+const searchFilms = async () => {
   try {
     const response = await swapiService.get('/films/')
     films.value = response.data.results
   } catch (error) {
     console.error('Error fetching films:', error)
-  } finally {
-    loading.value = false
   }
-})
+}
+
+// Fetch films on component mount
+onMounted(searchFilms)
 </script>
 
 <style lang="scss">
