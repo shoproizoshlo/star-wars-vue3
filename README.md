@@ -1,46 +1,49 @@
-# star-wars
+# Frontend Mentor - Blogr landing page solution
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is created to explore Vue.js and TypeScript, practice working with APIs, and implement keyword search. The project features Star Wars movies. All data is retrieved from the https://swapi.dev/ API. As the API request takes a long time to execute, a preloader has been added.
 
-## Recommended IDE Setup
+## Table of contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 
-## Type Support for `.vue` Imports in TS
+## Overview
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+### The challenge
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Users should be able to:
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- View the full list of Star Wars movie series.
+- Perform a search by title.
 
-## Customize configuration
+### Screenshot
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![](./screenshot-sw.png)
+![](./screenshot-search-sw.png)
 
-## Project Setup
+### Links
 
-```sh
-npm install
-```
+- Live Site URL: https://star-wars-vue.netlify.app
 
-### Compile and Hot-Reload for Development
+## My process
 
-```sh
-npm run dev
-```
+### Built with
 
-### Type-Check, Compile and Minify for Production
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Vue](https://vuejs.org) - JS library
 
-```sh
-npm run build
-```
+### What I learned
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Obtaining API data
+- Performing a case-sensitive keyword search
+- Vue: Project setup, component creation, and export
+- TypeScript: Data types and code handling
