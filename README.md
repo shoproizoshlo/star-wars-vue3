@@ -1,4 +1,4 @@
-# Frontend Mentor - Blogr landing page solution
+# Star wars movies library
 
 This project is created to explore Vue.js and TypeScript, practice working with APIs, and implement keyword search. The project features Star Wars movies. All data is retrieved from the https://swapi.dev/ API. As the API request takes a long time to execute, a preloader has been added.
 
